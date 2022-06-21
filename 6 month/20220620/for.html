@@ -5,7 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS 구구단</title>
   <style>
-    div{
+    #container{
+      display:flex;
+    }  
+#container div{
+      padding:0 20px 30px 20px;
+      margin:15px;
+      border:1px solid #ccc;
+      line-height:2;
+     
+    }
+    div h3 {
+      text-align:center;
+      font-weight:bold;
+    }
+    /* div{
       display:inline-block;
       padding:0 20px 30px 20px;
       margin:15px;
@@ -16,21 +30,24 @@
     div h3 {
       text-align:center;
       font-weight:bold;
-    } 
+    }  */
   </style>
 </head>
 <body>
   <h1>구구단</h1>
-  
-  <script>
-    var i, j;
-    for(i = 2; i < 10; i++){
-      document.write("<div>");
-      document.write("<h3>" + i + "단</h3>");
-      for(j = 2; j < 10; j++)
-        document.write(i + "*" + j + "=" + i * j + "<br>");
-      document.write("</div>");
-    }
-  </script>
+  <div id = "container"></div>
+    <script>
+      let i, j;
+      let containerDiv =  document.getElementById("container");
+      let htmlTxt = "";
+      for(i = 2; i < 10; i++) {
+       htmlTxt = htmlTxt + "<div><h3>" + i + "단</h3>";
+       for(j = 2; j < 10; j++)
+       htmlTxt = htmlTxt + i + "X" + j + "=" + i * j + "<br>";
+       htmlTxt = htmlTxt + "</div>";
+      }
+      containerDiv.innerHTML = htmlTxt 
+    </script>
+  </div>
 </body>
 </html>

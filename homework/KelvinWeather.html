@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kelvin Weather</title>
 </head>
 <body>
   <img src = "url" style = "width:300px">
   <script>
-    const kelvin = prompt("켈빈 온도는 몇 도 입니까?")
+    const kelvin = prompt("켈빈 온도는 몇 도입니까?", "293");
+    let celsius = Math.floor(kelvin - 273.15);
+    let farenheit = Math.floor(celsius * (9 / 5) + 32);
+    let newton = Math.floor((farenheit - 32) * 0.18333);
+    document.write(`<h1>${kelvin}K = ${celsius}℃ = ${farenheit}℉ = ${newton}N</h1>`);
   </script>
 </body>
 </html>

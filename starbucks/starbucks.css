@@ -85,3 +85,44 @@ header .logo {
   right : 5px;
   margin: auto;
 }
+.mian-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+}
+.mian-menu .item .item_name {
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+.mian-menu .item:hover .item_name {
+  background-color: #2C2A29;
+  color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+.mian-menu .item .item_contents {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  display: none;
+}
+.mian-menu .item:hover .item_contents {
+  display: block;
+}
+.mian-menu .item .item_contents .contents_menu {
+  background-color: #2C2A29;
+}
+.mian-menu .item .item_contents .contents_menu > ul {
+  padding: 20px 0;
+  display: flex;
+}
+.mian-menu .item .item_contents .contents_menu > ul > li {
+  width: 220px;
+}
+.mian-menu .item .item_contents .contents_menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}

@@ -1,9 +1,10 @@
+/*main-1*/
 body {
-  font-family : 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
-  color : #333;
+  color: #333;
 }
 a {
   text-decoration: none;
@@ -15,12 +16,11 @@ img {
   width: 1100px;
   margin: 0 auto;
   position: relative;
-  background: orange;
 }
 header {
   width: 100%;
   position: fixed;
-  top : 0;
+  top: 0;
   z-index: 9;
   background-color: #F6F5F0;
   border-bottom: 1px solid #c8c8c8;
@@ -31,17 +31,17 @@ header .inner {
 header .logo {
   height: 75px;
   position: absolute;
-  top : 0;
+  top: 0;
   bottom: 0;
   left: 0;
   margin: auto;
 }
 .sub-menu {
-  position:absolute;
+  position: absolute;
   top: 10px;
   right: 0;
   display: flex;
-  background:lightgreen;
+  background: #F6F5F0;
 }
 .sub-menu ul.menu {
   font-family: Arial, sans-serif;
@@ -52,13 +52,13 @@ header .logo {
   position: relative;
 }
 .sub-menu ul.menu li a {
-  padding : 11px 16px;
+  padding: 11px 16px;
   display: block;
   font-size: 13px;
-  color : #656565;
+  color: #656565;
 }
 .sub-menu ul.menu li a:hover {
-  color : black;
+  color: black;
 }
 .sub-menu .search {
   position: relative;
@@ -69,7 +69,7 @@ header .logo {
   width: 190px;
   height: inherit;
   padding: 4px 10px;
-  border: 10px soild #ccc;
+  border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 5px;
   outline: none;
@@ -79,50 +79,172 @@ header .logo {
 }
 .sub-menu .search .material-icons {
   height: 24px;
-  position : absolute;
-  top : 0;
-  bottom : 0;
-  right : 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
   margin: auto;
 }
-.mian-menu {
+
+/*main-2*//*main-2*/
+/*main-2*//*main-2*/
+/*main-2*//*main-2*/
+/*main-2*//*main-2*/
+
+.main-menu {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 1;
   display: flex;
 }
-.mian-menu .item .item_name {
+.main-menu .item .item_name {
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
   font-size: 13px;
 }
-.mian-menu .item:hover .item_name {
+.main-menu .item:hover .item_name {
   background-color: #2C2A29;
   color: #669900;
   border-radius: 6px 6px 0 0;
 }
-.mian-menu .item .item_contents {
+.main-menu .item .item_contents {
   width: 100%;
   position: fixed;
   left: 0;
   display: none;
 }
-.mian-menu .item:hover .item_contents {
+.main-menu .item:hover .item_contents {
   display: block;
 }
-.mian-menu .item .item_contents .contents_menu {
+.main-menu .item .item_contents .contents_menu {
   background-color: #2C2A29;
 }
-.mian-menu .item .item_contents .contents_menu > ul {
+.main-menu .item .item_contents .contents_menu > ul {
   padding: 20px 0;
   display: flex;
 }
-.mian-menu .item .item_contents .contents_menu > ul > li {
+.main-menu .item .item_contents .contents_menu > ul > li {
   width: 220px;
 }
-.mian-menu .item .item_contents .contents_menu > ul > li h4 {
-  padding: 3px 0 12px 0;
-  font-size: 14px;
+.main-menu .item .item_contents .contents_menu > ul > li h4 {
+ padding: 3px 0 12px 0;
+ font-size: 14px;
+ color: #fff;
+}
+.main-menu .item .item_contents .contents_menu > ul > li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+.main-menu .item .item_contents .contents_menu > ul > li ul li:hover {
+  color: #669900;
+}
+.main-menu .item .item_contents .contents_texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("./images/main_menu_pattern.jpg");
+}
+.main-menu .item .item_contents .contents_texture h4 {
+  color: #999;
+  font-weight: 900;
+}
+.main-menu .item .item_contents .contents_texture p {
+  color: #64a70b;
+  margin: 4px 0 14px;
+}
+/*main-3*//*main-3*/
+/*main-3*//*main-3*/
+/*main-3*//*main-3*/
+/*main-3*//*main-3*/
+
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor:pointer;
+  box-sizing:border-box;
+  display: block;
+  transition: .4s;
+}
+
+.btn:hover {
+  background-color: #333;
   color: #fff;
+}
+
+.visual {
+  margin-top: 120px;
+  background-image: url("./images/visual_bg.jpg");
+  background-position: center;
+}
+
+.visual .inner {
+  height: 646px;
+  position: relative;
+}
+
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+
+.visaul .title .btn {
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
+
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+
+.visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+
+.visual .cup2.text {
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+
+.visual .spoon {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+}
+
+/*main-4*/
+/*main-4*/
+/*main-4*/
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+  cursor: pointer;
 }

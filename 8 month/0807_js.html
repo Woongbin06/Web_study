@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first js</title>
+</head>
+<body>
+  <script>
+    let name = "Mike";
+    const message = "I'm a boy";
+    // 숫자형
+    const age = 30;
+    const x = 1 / 0;
+    console.log(x); // Infinity
+
+    // NaN = Not a number
+    const name1 = "Mike";
+    const y = name1 / 2;
+    console.log(y); // NaN
+
+    // Boolean
+    const a = true;
+    const b = false;
+    console.log(age > 40); // false
+
+    // null and undefined
+    let age1;
+    console.log(age1); // undefined
+    let user = null;
+
+    // typeof 연산자
+    const name2 = "Mike"
+    console.log(typeof 3)
+    console.log(typeof (name2));
+
+    // alert. prompt, confirm 
+    const naem3 = prompt("이름을 입력하세요."); // 아무것도 입력안하면 null
+    alert(`환영합니다, ${naem3}님`);
+    
+    const isAdult = confirm("당신은 성인입니까?");
+    console.log(isAdult);
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 형변환
+    const mathScore = prompt("수학 몇점 ?"); // prompt는 무조건 문자열로 입력 받음.
+    const engScore = prompt("영어 몇점 ?");
+    const result = (mathScore + engScore) / 2;
+    console.log(result);
+
+    // 강제 형변환
+    console.log(String(3), String(true), String(null)); // 문자열로 형변환
+    console.log(Number("1234"), Number(true)); // 숫자로 형변환
+    
+    // 연산자
+    const num = 2 ** 3; // 2의 3제곱
+    const num1 = 10;
+    num += 5; // num = num + 5와 같음.
+
+    함수
+    function showError() {
+      alert("에러가 발생했습니다. 다시 시도해주세요.");
+    }
+    showError();
+    // 매개변수가 있는 함수
+    function sayHello(name) {
+      let msg = `Hello`;
+      if(name) {
+        msg += ', ' + name;
+      }
+      alert(msg);
+    }
+
+    sayHello("웅빈"); // 매개변수로 '웅빈'이라는 문자열
+    sayHello(); // 매개변수를 안주면 Hello만 출력
+
+    // 전역변수와 지역변수
+    let msg = "welcome"; // 전역변수
+    alert(msg);
+
+    function sayHello(name) {
+      // 같은 이름의 변수 중에서 지역변수를 먼저 찾음.
+      let msg = "Hello"; // 지역변수
+      alert(msg + " " + name);
+    } // msg 지역변수 제거
+    sayHello("웅빈");
+    alert(msg);
+
+    // 함수 표현식(이름없는 함수)
+    showError(); // 에러
+    let showError = function() {
+      console.log("error");
+    }
+    showError(); // error 출력
+    // 화살표 함수
+    let add = (num1, num2) => {
+      return num1 + num2;
+    }
+    let add1 = (num1, num2) => (
+      num1 + num2 // return문 생략 가능
+    );
+    let add2 = (num1, num2) => num1 + num2; // return문이 한줄 일때
+  </script>
+</body>
+</html> 

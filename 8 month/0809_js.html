@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체(Object)
+    const superman = {
+      name : 'clark', // 키(key) : 값(value)
+      age : 33,
+    };
+    // 객체 접근
+    superman.name;
+    superman[age];
+    // 객체 추가
+    superman.gender = "male";
+    superman["hairColor"] = "black";
+    // 삭제
+    delete superman.hairColor;
+
+    // 객체 반환 함수
+    function makeObject(name, age) {
+      return {
+        name : name,
+        age : age,
+        hobby : "football"
+      }
+    }
+
+    const Mike = makeObject("Mike", 30);
+    console.log(Mike);
+
+    console.log("age" in Mike); // Mike안에 age변수가 있는지 없는지 확인
+
+    // 객체 in 실용성 있는 것
+    function isAdult(user) {
+      if(!('age' in user) || // user에 age가 없거나
+      user.age < 20) { // 20살 미만이면 false
+        return false;
+      }
+      return true;
+    }
+
+    const 세원 = {
+      name : "세원",
+      age :  100
+    };
+    const 웅빈 = {
+      name : "웅빈"
+    };
+
+    console.log(isAdult(jane));
+
+    // 객체 for ... in
+    const 호현 = {
+      name : "호현",
+      age : 30
+    };
+
+    for(key in 호현) {
+      console.log(호현[key]);
+    }
+  </script>
+</body>
+</html>

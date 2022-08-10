@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체 method
+    const superman = {
+      name : "clark",
+      age : 33,
+      fly : function() {
+        console.log("날아갑니다.");
+      }
+    }
+
+    let user = {
+      name : "세원",
+      showname() {
+        console.log(user.name)
+      }
+    };
+    let man = user;
+    man.name = "Tom";
+    man.showname();
+    user = null;
+    man.showname(); // 에러 발생 showname을 this.name으로 바꾸면 됨
+
+    // 배열 (Array)
+    let students = ["세원", "웅빈", "호현", "우빈"]; // 객체, 메소드 등 다 넣을 수 있음.
+    let days = ["mon", "tue", "wed"];
+    days[1] = "화요일";
+    days.push("thu"); // 젤 뒤에 추가 pop은 젤 끝에 제거
+    days.unshift("sun"); // 젤 앞에 추가 shift는 젤 앞에 제거
+    console.log(days, days.length);
+  </script>
+</body>
+</html>

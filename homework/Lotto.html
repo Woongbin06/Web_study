@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 추첨기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2 class="title">로또 추첨기</h2>
+  </header>
+  <div class="content">
+    <div class="rottoNum_wrap">
+      <div class="ball" id="num1"><span>?</span></div>
+      <div class="ball" id="num2"><span>?</span></div>
+      <div class="ball" id="num3"><span>?</span></div>
+      <div class="ball" id="num4"><span>?</span></div>
+      <div class="ball" id="num5"><span>?</span></div>
+      <div class="ball" id="num6"><span>?</span></div>
+      <div class="plus">+</div>
+      <div class="ball bonus" id="num7"><span>?</span></div>
+      <div class="btn_wrap">
+        <input class="btn" type="button" value="추첨하기" onclick="getNum()">
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function getNum() {
+    let ball = document.getElementsByClassName("ball");
+
+    for (let i = 1; i <= 7; i++) {
+      let reset = document.getElementById(`num${ i }`);
+      reset.innerHTML = `<span>?</span>`;
+    }
+
+    let rottoNum = [];
+
+    let count = 0;
+    for (let i = 0; i < 7; i++) {
+      let randomNumber = Math.floor(Math.random() * 45) + 1;
+      rottoNum[i] = randomNumber;
+
+      while (1) {
+        if (rottoNum.indexOf(randomNumber) < 0) {
+          rottoNum[count] = randomNumber;
+          count += 1;
+          break;
+        } else {
+          randomNumber = Math.floor(Math.random() * 45) + 1;
+        }
+      }
+    }
+
+    let delay = 0;
+    for (let i = 0; i < rottoNum.length; i++) {
+      let result = document.getElementById(`num${i + 1}`);
+      setTimeout(() => { result.innerHTML = `<span>${rottoNum[i]}</span>` }, delay);
+      delay += 1000;
+    }
+  }
+</script>
+</html>
